@@ -3,8 +3,6 @@ title: "Building LibreOffice for the S390"
 date: 2015-01-15
 ---
 
-# Overview
-
 Sometimes you find yourself working on a product that needs LibreOffice to do something. Maybe it is document conversions, maybe it is something else. The idea though, is that it needs a headless version of LibreOffice to be able to do something. To make this more complicated, this needs to be compiled on a [S/390](http://en.wikipedia.org/wiki/IBM_ESA/390) mainframe. Well I can guarantee that LibreOffice doesn't offer pre-packaged versions for a mainframe. This is a guide on how to compile a headless version of LibreOffice for a mainframe running [SLES](http://en.wikipedia.org/wiki/SUSE_Linux_Enterprise_Server) on [zLinux](http://en.wikipedia.org/wiki/Linux_on_System_z).
 
 I know, you are saying that linux is linux and we should just be able to follow the guide on [Building On Linux](https://wiki.documentfoundation.org/Development/BuildingOnLinux). Mostly that will be true, so by all means, use it as a guide. I ran into a few issues that I had to work around, so use both.
