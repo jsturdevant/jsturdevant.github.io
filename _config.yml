@@ -6,16 +6,36 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Jonathon Sturdevant - Adventures in a Software World
+header-img: img/home-bg.jpg
+email: jonathon.sturdevant@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I been working in the software world for over a decade and have run across
+  numerous things that have amazed me. In an effort to share how I see the 
+  world, this blog has been created.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://jsturdevant.github.io" # the base hostname & protocol for your site
+twitter_username: jonno0211
+github_username:  jsturdevant
+facebook_username:  jonathon.sturdevant
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+kramdown:
+  input: GFM
+
+gems: [jekyll-paginate]
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "jon"
+      header-img: "img/config-bg.jpg"
