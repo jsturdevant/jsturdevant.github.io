@@ -6,8 +6,8 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jonathon Sturdevant - Adventures in a Software World
-header-img: img/home-bg.jpg
+title: Adventures in a Software World
+header-img: img/hands-bg.jpg
 email: jonathon.sturdevant@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   I been working in the software world for over a decade and have run across
@@ -18,6 +18,7 @@ url: "http://jsturdevant.github.io" # the base hostname & protocol for your site
 twitter_username: jonno0211
 github_username:  jsturdevant
 facebook_username:  jonathon.sturdevant
+linkedin_username: jsturdevant
 
 # Build settings
 markdown: kramdown
