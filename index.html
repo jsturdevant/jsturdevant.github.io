@@ -14,7 +14,6 @@ layout: page
         {% endif %}
     </a>
     <p class="post-meta">Posted by {% if post.author %}{% assign author = site.data.people[post.author] %} <a rel="author" href="https://twitter.com/{{ author.twitter }}" title="{{ author.name }}">{{ author.name }}</a>{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
-    {{ post.excerpt }}
 </div>
 <hr>
 {% endfor %}
