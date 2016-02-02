@@ -96,34 +96,34 @@ When running with headless enabled, the copy and paste test failed. As we are ru
 __File:__ `sw/qa/extras/odfimport/odfimport.cxx`
 
 __Change:__ Change the test that checks copy and paste (`testFdo37606Copy`). I changed it to  look like this:
-```cpp
-DECLARE_ODFIMPORT_TEST(testFdo37606Copy, "fdo37606.odt")
-{
-    SwXTextDocument* pTxtDoc = dynamic_cast<SwXTextDocument *>(mxComponent.get());
-    CPPUNIT_ASSERT(pTxtDoc);
-    SwWrtShell* pWrtShell = pTxtDoc->GetDocShell()->GetWrtShell();
-    // Ctrl-A
-    pWrtShell->SelAll();
 
-    // Ctrl-C
-    SwTransferable* pTransferable = new SwTransferable(*pWrtShell);
-    uno::Reference<datatransfer::XTransferable> xTransferable(pTransferable);
-    pTransferable->Copy();
 
-    pWrtShell->SttEndDoc(false); // Go to the end of the doc.
+    DECLARE_ODFIMPORT_TEST(testFdo37606Copy, "fdo37606.odt")
+    {
+        SwXTextDocument* pTxtDoc = dynamic_cast<SwXTextDocument *>(mxComponent.get());
+        CPPUNIT_ASSERT(pTxtDoc);
+        SwWrtShell* pWrtShell = pTxtDoc->GetDocShell()->GetWrtShell();
+        // Ctrl-A
+        pWrtShell->SelAll();
 
-    // Ctrl-V
-    TransferableDataHelper aDataHelper(TransferableDataHelper::CreateFromSystemClipboard(&pWrtShell->GetView().GetEditWin()));
-    SwTransferable::Paste( *pWrtShell, aDataHelper );
+        // Ctrl-C
+        SwTransferable* pTransferable = new SwTransferable(*pWrtShell);
+        uno::Reference<datatransfer::XTransferable> xTransferable(pTransferable);
+        pTransferable->Copy();
 
-    // Previously copy&paste failed to copy the table in case it was the document-starting one.
-    uno::Reference<text::XTextTablesSupplier> xTablesSupplier(mxComponent, uno::UNO_QUERY);
-    uno::Reference<container::XIndexAccess> xTables(xTablesSupplier->getTextTables(), uno::UNO_QUERY);
-    //CPPUNIT_ASSERT_EQUAL(sal_Int32(2), xTables->getCount());
-/* the assertion didn't pass here - don't care because we aren't going to be using the copy and paste functionality */
-    CPPUNIT_ASSERT_EQUAL(sal_Int32(2), sal_Int32(2));
-}
-```
+        pWrtShell->SttEndDoc(false); // Go to the end of the doc.
+
+        // Ctrl-V
+        TransferableDataHelper aDataHelper(TransferableDataHelper::CreateFromSystemClipboard(&pWrtShell->GetView().GetEditWin()));
+        SwTransferable::Paste( *pWrtShell, aDataHelper );
+
+        // Previously copy&paste failed to copy the table in case it was the document-starting one.
+        uno::Reference<text::XTextTablesSupplier> xTablesSupplier(mxComponent, uno::UNO_QUERY);
+        uno::Reference<container::XIndexAccess> xTables(xTablesSupplier->getTextTables(), uno::UNO_QUERY);
+        //CPPUNIT_ASSERT_EQUAL(sal_Int32(2), xTables->getCount());
+    /* the assertion didn't pass here - don't care because we aren't going to be using the copy and paste functionality */
+        CPPUNIT_ASSERT_EQUAL(sal_Int32(2), sal_Int32(2));
+    }
 
 ---
 
@@ -151,7 +151,7 @@ The update is to tell it to not pull it in when headless is enabled:
 
 # Environment Variables
 
-I ran this build on a 64 bit system and therefore needed one additional variable to be set. 
+I ran this build on a 64 bit system and therefore needed one additional variable to be set.
 
 ```shell
 $> export USE_64=1

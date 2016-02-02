@@ -2,6 +2,6 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'jekyll-paginate'
-gem 'pygments.rb'
+gem 'rouge'
 gem 'kramdown'
 gem 'jekyll-watch'
