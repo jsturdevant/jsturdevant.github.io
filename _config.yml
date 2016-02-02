@@ -11,7 +11,7 @@ header-img: img/hands-bg.jpg
 email: jonathon.sturdevant@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   I been working in the software world for over a decade and have run across
-  numerous things that have amazed me. In an effort to share how I see the 
+  numerous things that have amazed me. In an effort to share how I see the
   world, this blog has been created.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jsturdevant.github.io" # the base hostname & protocol for your site
