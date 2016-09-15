@@ -19,7 +19,8 @@ Defining business domains for microservices is an art, not a science and should 
 
 The goal of the business domain is to create an evolvable and independent microservice.
 
-## Deployable
+## Monitoring/Statistics
+ - Ben
 
 ## Scalable
 
@@ -29,7 +30,7 @@ The goal of the business domain is to create an evolvable and independent micros
 
 ## Discipline
 
-## Automated Testing
+## Automated Testing - Jon
 
 Look at Sociable unit testing (black box) and Solitary unit testing
 
