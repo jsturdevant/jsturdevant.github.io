@@ -17,19 +17,45 @@ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB8
 
 This will take care of adding RVM to your profile and installing the latest ruby. Pay attention to the messages that come out of the install - it may tell you that you need to source a file before you can use RVM.
 
-Next, let's tell our session to use a specific version of ruby
+Next, let's tell our session to use a specific version of ruby. First, we need to figure out which version was installed.
 
 ```bash
-nvm use 2.2.1
+rvm ls
+```
+
+It should result in something like this
+
+```bash
+$ rvm ls
+
+rvm rubies
+
+=* ruby-2.3.0 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+Tell rvm to use the installed version
+
+```bash
+rvm use 2.3.0
 ```
 
 If you have the system ruby installed, you can switch back by running the command
 
 ```bash
-nvm use system
+rvm use system
 ```
 
-Ok, so now ruby should be in a good spot - we can install our dependencies. Within the base directory of this project, run the following command to install the needed gems
+Ok, so now ruby should be in a good spot - we can install our dependencies. We will need the gem bundler to be able to do this. So first, run the following command.
+
+```bash
+gem install bundler
+```
+
+Then, within the base directory of this project, run the following command to install the needed gems
 
 ```bash
 bundle install
