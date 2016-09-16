@@ -20,6 +20,12 @@ Defining business domains for microservices is an art, not a science and should 
 The goal of the business domain is to create an evolvable and independent microservice.
 
 ## Monitoring/Statistics
+https://communities.ca.com/community/ca-apm/blog/2015/10/15/what-s-new-in-apm-101-monitoring-modern-apps-nodejs-cloud-foundry-docker-containers -- APM 10.1 supports several technologies key to monitoring a microservice environment... and we just installed it.
+
+http://rick-hightower.blogspot.com/2015/05/microservices-runtime-statistics-and.html -- It isn't enough to just have performance information though... we need to react to changes in performance automatically.  Several tools/libs listed in here that provide that kind of reactionary behavior
+
+http://martinfowler.com/bliki/MonolithFirst.html -- Fowler points out that he's familiar with several anecdotes of teams who set out to build a microservice architecture and failed.  He's also seen many successful monolith-transformed-to-microservice situations.  Not enough evidence to draw a conclusion but there's a possibility that building a monolith is a good first step as it gives you time to shake out how to effectively architect your microservice... how to wrap your head around the problem domain.
+
  - Ben
 
 ## Scalable
