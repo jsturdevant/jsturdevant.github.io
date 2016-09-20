@@ -39,5 +39,5 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "jon"
+      author: ["jon"]
       header-img: "img/config-bg.jpg"

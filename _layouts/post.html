@@ -12,7 +12,19 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted by {% if page.author %}{% assign author = site.data.people[page.author] %} <a rel="author" href="https://twitter.com/{{ author.twitter }}" title="{{ author.name }}">{{ author.name }}</a>{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta">Posted by
+                    {% for name in page.author %}
+                        {% if forloop.index0 > 0 %}
+                            {% if forloop.last %}
+                                and
+                            {% else %}
+                                ,
+                            {% endif %}
+                        {% endif %}
+                        {% assign author = site.data.people[name] %}
+                        <a rel="author" href="https://twitter.com/{{ author.twitter }}" title="{{ author.name }}">{{ author.name }}</a>
+                    {% endfor %}
+                    on {{ page.date | date: "%B %-d, %Y" }}</span>
                 </div>
             </div>
         </div>

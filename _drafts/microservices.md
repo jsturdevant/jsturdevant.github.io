@@ -1,6 +1,7 @@
 ---
 title: Microservices Position
 subtitle: What Are Microservices? Should We Use Them?
+author: ["jon", "ben"]
 ---
 
 Microservices have become a really hot topic within the last couple years. [ThoughtWorks](https://www.thoughtworks.com/insights/blog/microservices-nutshell), [TechTarget](http://searchsoa.techtarget.com/definition/microservices), [O'Reilly](http://www.oreilly.com/programming/free/reactive-microservices-architecture.html), [SmartBear](https://smartbear.com/learn/api-design/what-are-microservices/), and [Martin Fowler](http://martinfowler.com/articles/microservices.html) have all written about Microservices (among others). Almost all of those referenced articles start off by saying there is no globally accepted definition of microservices. Instead they all attempt to explain the characteristics of a microservice. 
