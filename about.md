@@ -14,3 +14,5 @@ I attended [Rochester Institute of Technology](http://rit.edu) in the early 2000
 Right now, I really enjoy coding in a language that is just as old as Java - Ruby. It isn't for everyone, but I really enjoy the flexibility that Ruby provides. There is, of course, some room for improvement in the Ruby language as well.
 
 Additionally, I look at efficiency improvements that could be made to help with producing high quality software quicker. There are a lot of people already in this space that have a lot of opinions on how things should be done. I don't know how things will work out, but I want to put my opinion out there. If nothing else, maybe I can reference this later on how or why I did something.
+
+{% include github.html %}

@@ -395,3 +395,42 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+.rounded_panel {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.txt_lightgrey {
+  background-color: white;
+  border-color: #ABABAB;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  border-right-style: solid;
+  border-right-width: 0px;
+  margin-bottom: 20px;
+}
+.top-rounded-panel {
+  padding-left:15px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.top-rounded-panel h1{
+  color: #ff3500;
+  font-weight: 300;
+  padding-top: 15px;
+}
+.content-rounded-panel {
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  margin-left:5px;
+  margin-right:5px;
+  margin-bottom:10px;
+}
+
+.github-card {
+  margin-top: 10px;
+}
