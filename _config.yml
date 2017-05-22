@@ -37,9 +37,6 @@ github:
     user: jsturdevant
     repo: golf-league
   -
-    user: jsturdevant
-    repo: electron-store
-  -
     user: navarr
     repo: Sockets
 
